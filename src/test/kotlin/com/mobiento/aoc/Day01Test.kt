@@ -2,19 +2,39 @@ package com.mobiento.aoc
 
 import org.junit.Assert.assertEquals
 import org.junit.Test
-import java.io.File
-import com.mobiento.aoc.readInput
 
 class Day01Test {
-
 
     @Test
     fun testPartOne() {
         val sut = Day01()
-        val input = readInput("Day01_input")
-        println("input: $input")
+        val input = readInput("Day01_test")
         val result = sut.part1(input)
-        println("result: $result")
-        assertEquals(result, 24000)
+        assertEquals(24000, result)
     }
+
+    @Test
+    fun testPartOneForReal() {
+        val sut = Day01()
+        val input = readInput("Day01_input")
+        val result = sut.part1(input)
+        assertEquals(74394, result)
+    }
+
+    @Test
+    fun testPartTwo() {
+        val sut = Day01()
+        val input = readInput("Day01_test")
+        val result = sut.part2(input)
+        assertEquals(45000, result)
+    }
+
+    @Test
+    fun testPartTwoForReal() {
+        val sut = Day01()
+        val input = readInput("Day01_input")
+        val result = sut.part2(input)
+        assertEquals(212836, result)
+    }
+
 }
