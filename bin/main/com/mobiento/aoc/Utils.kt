@@ -1,3 +1,5 @@
+package com.mobiento.aoc
+
 import java.io.File
 import java.math.BigInteger
 import java.security.MessageDigest
@@ -5,8 +7,7 @@ import java.security.MessageDigest
 /**
  * Reads lines from the given input txt file.
  */
-fun readInput(name: String) = File("src", "$name.txt")
-    .readLines()
+fun Any.readInput(name: String) = File(javaClass.classLoader?.getResource("$name")?.file ?: "").readLines()
 
 /**
  * Converts string to md5 hash.

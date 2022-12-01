@@ -6,10 +6,17 @@ repositories {
     mavenCentral()
 }
 
+dependencies {
+    testImplementation("junit:junit:4.13.2")
+}
+
 tasks {
     sourceSets {
         main {
-            java.srcDirs("src")
+            java.srcDirs("src/main/kotlin")
+        }
+        test {
+            java.srcDirs("src/test/kotlin")
         }
     }
 
