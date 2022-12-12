@@ -67,7 +67,7 @@ class Day03Test {
         val sut = Day03()
         val input = readInput("Day03_test")
         val result = sut.part2(input)
-        assertEquals(12, result)
+        assertEquals(70, result)
     }
 
 
@@ -77,7 +77,7 @@ class Day03Test {
         val sut = Day03()
         val input = readInput("Day03_input")
         val result = sut.part2(input)
-        assertEquals(10398, result)
+        assertEquals(2508, result)
     }
 
 }
